@@ -509,6 +509,10 @@ p {
 @media (max-width: 767px) {
   .hero-video {
     display: block;
+    object-position: center 15%; /* pull dog's head up closer to nav */
+  }
+  .hero-content {
+    bottom: var(--space-2xl); /* lift content up so button is fully visible */
   }
 }
 
