@@ -502,7 +502,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center 35%;
 }
 
 /* Video plays on mobile — muted + playsinline works on modern iOS/Android */
@@ -531,7 +531,7 @@ p {
 /* --- Content layer: pinned to the bottom ------------------- */
 .hero-content {
   position: absolute;
-  bottom: var(--space-xl);
+  bottom: var(--space-sm);
   left: 0;
   right: 0;
   z-index: 2;
