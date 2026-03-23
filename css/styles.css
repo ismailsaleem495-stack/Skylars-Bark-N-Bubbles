@@ -508,15 +508,10 @@ p {
 /* Video plays on mobile — muted + playsinline works on modern iOS/Android */
 @media (max-width: 767px) {
   .section-hero {
-    /* svh = small viewport height — excludes browser chrome so nothing is hidden */
     height: calc(100svh - var(--nav-height));
   }
   .hero-video {
     display: block;
-    object-position: center top; /* show dog's head at the top */
-  }
-  .hero-content {
-    bottom: var(--space-2xl);
   }
 }
 
