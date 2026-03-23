@@ -505,10 +505,10 @@ p {
   object-position: center 35%; /* between top and center — shows dog's head and body */
 }
 
-/* CLAUDE.md: hide video on mobile, show poster/bg instead */
+/* Video plays on mobile — muted + playsinline works on modern iOS/Android */
 @media (max-width: 767px) {
   .hero-video {
-    display: none;
+    display: block;
   }
 }
 
@@ -758,6 +758,12 @@ p {
 }
 
 /* --- Hero responsive --------------------------------------- */
+@media (max-width: 767px) {
+  .hero-service-tags {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-content {
     bottom: var(--space-xl);
@@ -787,7 +793,7 @@ p {
    ============================================================ */
 
 .section-services {
-  padding: var(--space-5xl) 0 var(--space-5xl);
+  padding: var(--space-5xl) 0;
   background: var(--color-bg);
   /* Layered radial gradients for depth — not a flat surface */
   background-image:
@@ -1064,6 +1070,12 @@ p {
 }
 
 /* --- Services responsive ----------------------------------- */
+@media (max-width: 767px) {
+  .section-services {
+    padding: var(--space-3xl) 0;
+  }
+}
+
 @media (min-width: 640px) {
   .services-grid {
     grid-template-columns: 1fr 1fr;
@@ -1933,12 +1945,18 @@ p {
 
 /* --- Booking responsive --------------------------------- */
 @media (max-width: 767px) {
+  .section-booking {
+    padding: var(--space-3xl) 0;
+  }
   .booking-inner {
     flex-direction: column;
   }
   .booking-content {
     align-items: center;
     text-align: center;
+  }
+  .booking-cta-wrap {
+    align-items: center;
   }
   .booking-image-col {
     width: 100%;
