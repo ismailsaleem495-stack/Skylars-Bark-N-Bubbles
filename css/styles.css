@@ -769,7 +769,7 @@ p {
   /* Split layout: headline at top, subheadline + CTA near bottom */
   .hero-content {
     top: var(--space-2xl);              /* 48px — clear of the Crawley eyebrow tag */
-    bottom: calc(var(--space-2xl) + 15vh); /* 15% higher than before */
+    bottom: calc(var(--space-2xl) + 12vh); /* nudged 3% lower */
     display: flex;
     flex-direction: column;
   }
