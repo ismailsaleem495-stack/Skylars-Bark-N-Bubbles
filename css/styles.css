@@ -765,6 +765,30 @@ p {
   .hero-service-tags {
     display: none;
   }
+
+  /* Split layout: headline at top, subheadline + CTA near bottom */
+  .hero-content {
+    top: var(--space-xl);       /* 32px below nav — headline sits above dog */
+    bottom: var(--space-2xl);   /* 48px from bottom — CTA always visible */
+    display: flex;
+    flex-direction: column;
+  }
+  /* Unwrap inner so all three children are direct flex items */
+  .hero-content-inner {
+    display: contents;
+  }
+  /* Headline stays first = top of flex column */
+  .hero-headline {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
+    margin-bottom: 0;
+  }
+  /* auto margin pushes subheadline (and CTA after it) to bottom */
+  .hero-subheadline {
+    margin-top: auto;
+    font-size: 0.875rem;
+    line-height: 1.65;
+    margin-bottom: var(--space-lg);
+  }
 }
 
 @media (min-width: 768px) {
