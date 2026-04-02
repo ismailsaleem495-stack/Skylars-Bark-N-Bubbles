@@ -1,5 +1,5 @@
 /* ============================================================
-   THE PAMPERED PAW — MAIN JS
+   SKYLAR'S BARK N BUBBLES — MAIN JS
    Phase 1: Navigation behaviour
    Phase 2: Hero animation sequence
    Phase 5: Reviews config + render
@@ -15,11 +15,11 @@
    ============================================================ */
 const BOOKING_CONFIG = {
   mode:        'call',
-  phone:       '07566 759470',
-  phoneTel:    'tel:07566759470',
-  whatsappNum: '447566759470',
-  whatsappMsg: encodeURIComponent('Hi Katie, I\'d like to book a grooming appointment for my dog.'),
-  calendlyUrl: 'https://calendly.com/thepamperedpaw',
+  phone:       '07761 910461',
+  phoneTel:    'tel:07761910461',
+  whatsappNum: '447761910461',
+  whatsappMsg: encodeURIComponent('Hi Skylar, I\'d like to book a mobile grooming appointment for my dog.'),
+  calendlyUrl: 'https://calendly.com/skylarsbarkn-bubbles',
 };
 
 (function renderBooking() {
@@ -36,7 +36,7 @@ const BOOKING_CONFIG = {
         <svg class="booking-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
-        Call Katie Now
+        Call Skylar Now
       </a>
     `;
   }
@@ -82,39 +82,39 @@ const BOOKING_CONFIG = {
    ============================================================ */
 const REVIEWS_DATA = [
   {
-    name:     'Emma Thornton',
+    name:     'Sarah Hutchins',
     location: 'Crawley',
-    date:     '2 weeks ago',
+    date:     '1 week ago',
     rating:   5,
-    text:     'Our Cockapoo Bertie used to be really anxious at groomers — trembling before we even got through the door. Katie\'s calm home environment and patient approach have completely transformed that. He trots in confidently now and comes home looking amazing. Can\'t recommend her enough.',
+    text:     'The convenience alone would be worth it, but the quality of the groom is exceptional too. Skylar pulled up right outside, spent a full two hours with our Goldendoodle, and he came back to us looking incredible. No stress, no waiting room, no drama. We\'ll never go back to a salon.',
   },
   {
-    name:     'James Whitfield',
-    location: 'Horley',
-    date:     '1 month ago',
-    rating:   5,
-    text:     'Katie is brilliant with our elderly Spaniel who needs extra patience and care. She reads his cues beautifully — if he needs a break, they take one. No rushing, no stress. It\'s such a relief to find a groomer who genuinely puts the dog first. The results are always superb too.',
-  },
-  {
-    name:     'Charlotte Davies',
-    location: 'Crawley',
+    name:     'Tom Bradley',
+    location: 'Three Bridges',
     date:     '3 weeks ago',
     rating:   5,
-    text:     'Took our puppy Daisy for her first ever groom and it couldn\'t have gone better. Katie started with a little settling activity which Daisy loved, then took everything at her pace. She came home completely relaxed and happy — not stressed at all. Already booked the next visit!',
+    text:     'Our Labrador gets really car sick so salon trips were always a nightmare. Skylar\'s mobile service has completely changed grooming day for us. She arrives, gets set up, and within minutes Buddy is in the van looking totally relaxed. The whole experience is so calm and professional.',
   },
   {
-    name:     'Michael Okafor',
-    location: 'Horsham',
-    date:     '2 months ago',
+    name:     'Priya Nair',
+    location: 'Horley',
+    date:     '2 weeks ago',
     rating:   5,
-    text:     'I drive past other groomers to bring our Schnauzer to Katie and it is absolutely worth it. The quiet home salon, the one-on-one attention, the way she actually takes time to understand his temperament — it\'s a completely different experience. Brilliant results every single time.',
+    text:     'As a busy mum getting to a grooming salon was always a logistical headache. Having Skylar come to us has been a complete game changer. The groom itself is brilliant — our Bichon comes back fluffy and fresh every time. So convenient and genuinely excellent. Couldn\'t recommend more.',
   },
   {
-    name:     'Rosie Barker',
-    location: 'East Grinstead',
-    date:     '6 weeks ago',
+    name:     'David Whitmore',
+    location: 'Ifield',
+    date:     '1 month ago',
     rating:   5,
-    text:     'Our rescue dog had really difficult experiences before we got her and grooming was always a battle — until we found Katie. The trust-based approach, going at the dog\'s pace, the enrichment activities at the start and end — it\'s made the world of difference. She\'s a different dog afterwards.',
+    text:     'Skylar is brilliant with our elderly Spaniel who really struggles with car journeys. She arrives, sets up her van, and he gets a full groom without a single minute of travel stress. The care and patience she shows is evident in every visit. Cannot recommend her enough.',
+  },
+  {
+    name:     'Rachel Moore',
+    location: 'Worth',
+    date:     '5 weeks ago',
+    rating:   5,
+    text:     'Our rescue dog is very nervous and we\'d tried several salons with really mixed results. Skylar\'s one-on-one approach in the van is perfect for her — no other dogs, no noise, just calm and professional care right outside the house. She looks wonderful every time and comes back happy.',
   },
 ];
 
@@ -150,7 +150,7 @@ function renderReviews() {
   cta.setAttribute('role', 'listitem');
   cta.innerHTML = `
     <span class="reviews-cta-stars" aria-hidden="true">★★★★★</span>
-    <p class="reviews-cta-label">47 five-star reviews on</p>
+    <p class="reviews-cta-label">34 five-star reviews on</p>
     <p class="reviews-cta-platform">Google</p>
     <a href="#contact" class="reviews-cta-link">
       Book your appointment <span aria-hidden="true">→</span>

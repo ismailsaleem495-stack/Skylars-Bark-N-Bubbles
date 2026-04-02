@@ -2752,79 +2752,21 @@ a.contact-detail-value:hover {
 
 
 /* ============================================================
-   FAITHFUL HOUNDS — CLIENT-SPECIFIC OVERRIDES
+   SKYLAR'S BARK N BUBBLES — CLIENT-SPECIFIC OVERRIDES
    All overrides below are specific to this client.
    Do not copy back to the master template.
    ============================================================ */
 
-/* --- Nav logo: "Dog Grooming" sub-label -------------------- */
-.nav-logo-sub {
-  font-size: 0.78em;
-  font-weight: 300;
-  opacity: 0.72;
-  letter-spacing: 0.04em;
-}
-
-/* --- Services header: full-width flex with logo on right --- */
-.services-header {
-  max-width: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3xl);
-}
-
-.services-header-text {
-  max-width: 520px;
-}
-
-.services-header-images {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  flex-shrink: 0;
-}
-
-.services-header-about {
-  width: clamp(150px, 18vw, 230px);
-  height: clamp(180px, 22vw, 280px);
+/* --- Nav + footer logo image ------------------------------- */
+.nav-logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
-  border-radius: var(--radius-lg);
   flex-shrink: 0;
-  box-shadow:
-    0 0 0 4px rgba(253, 254, 255, 0.18),
-    0 0 35px rgba(86, 168, 236, 0.40),
-    0 0 75px rgba(86, 168, 236, 0.18),
-    var(--shadow-elevated);
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.25);
 }
 
-.services-header-logo {
-  width: clamp(180px, 22vw, 280px);
-  height: clamp(180px, 22vw, 280px);
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  flex-shrink: 0;
-  /* Glow effect mirrors the "Welcome to" white-highlight treatment */
-  box-shadow:
-    0 0 0 4px rgba(253, 254, 255, 0.18),
-    0 0 35px rgba(86, 168, 236, 0.40),
-    0 0 75px rgba(86, 168, 236, 0.18),
-    var(--shadow-elevated);
-  align-self: center;
-}
-
-@media (max-width: 767px) {
-  .services-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .services-header-images {
-    display: none;
-  }
-}
-
-/* --- Footer logo image (replaces SVG paw icon) ------------ */
 .footer-logo-img {
   width: 36px;
   height: 36px;
@@ -2834,46 +2776,79 @@ a.contact-detail-value:hover {
   box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.20);
 }
 
-/* --- Nav logo image (replaces SVG paw icon) --------------- */
-.nav-logo-img {
-  width: 38px;
-  height: 38px;
+/* --- Services header: flex row, logo on the right ---------- */
+.services-header {
+  max-width: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3xl);
+}
+
+.services-header-text {
+  max-width: 540px;
+  flex: 1;
+  min-width: 0;
+}
+
+.services-header-logo-col {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.services-logo-img {
+  width: clamp(180px, 20vw, 280px);
+  height: clamp(180px, 20vw, 280px);
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
-  /* Subtle ring so it reads well on both transparent + frosted nav */
-  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 0 0 4px var(--color-white),
+    0 0 0 7px rgba(86, 168, 236, 0.25),
+    0 16px 52px rgba(43, 102, 194, 0.24),
+    0 4px 14px rgba(0, 0, 0, 0.10);
 }
 
-/* "Faithful Hounds" nav text — dark slate grey.
-   White text-shadow ensures legibility over the dark hero video
-   when the nav is transparent. Shadow fades out once scrolled. */
-.nav-logo-text {
-  color: #2E3D4D;
-  text-shadow:
-    0 0 12px rgba(255, 255, 255, 0.75),
-    0 1px 3px  rgba(255, 255, 255, 0.85);
+@media (max-width: 767px) {
+  .services-header {
+    display: block;
+    max-width: 600px;
+  }
+  .services-header-logo-col {
+    display: none;
+  }
 }
 
-.is-scrolled .nav-logo-text {
-  text-shadow: none;
+/* --- About photo: landscape van image override ------------- */
+.about-photo-wrap {
+  aspect-ratio: 4 / 3;
 }
 
-/* --- "Welcome to" — dark slate grey over the hero video ---- */
-.hero-headline-intro {
-  color: #2E3D4D;
-  /* White glow ensures the dark text reads on the dark video */
-  text-shadow:
-    0 0 16px rgba(255, 255, 255, 0.80),
-    0 2px 6px  rgba(255, 255, 255, 0.65);
+@media (min-width: 1024px) {
+  .about-photo-wrap {
+    aspect-ratio: 4 / 3;
+  }
 }
 
-/* --- Hero content: nudge down a touch ---------------------- */
-/* Longer subheadline makes the block taller; this keeps it from
-   feeling cramped against the top nav on shorter viewports. */
-.hero-subheadline {
-  font-size: 0.9rem;
-  line-height: 1.65;
+/* --- About: secondary stacked image ----------------------- */
+.about-photo-wrap--secondary {
+  margin-top: calc(-1 * var(--space-5xl));
+  margin-left: var(--space-4xl);
+  position: relative;
+  z-index: 2;
+  border: 3px solid var(--color-white);
+  box-shadow:
+    0 14px 44px rgba(43, 102, 194, 0.22),
+    0 4px 16px rgba(0, 0, 0, 0.13);
+}
+
+@media (max-width: 767px) {
+  .about-photo-wrap--secondary {
+    margin-top: calc(-1 * var(--space-3xl));
+    margin-left: var(--space-2xl);
+  }
 }
 
 /* --- Gallery strip ----------------------------------------- */
@@ -2890,6 +2865,10 @@ a.contact-detail-value:hover {
 .gallery-item {
   position: relative;
   overflow: hidden;
+  /* Gradient fallback for when images haven't been added yet */
+  background: var(--color-primary-dark);
+  background-image:
+    radial-gradient(ellipse at 50% 40%, rgba(86, 168, 236, 0.40) 0%, transparent 70%);
 }
 
 .gallery-item img {
@@ -2918,4 +2897,11 @@ a.contact-detail-value:hover {
   .gallery-strip {
     height: 160px;
   }
+}
+
+/* --- Booking image: gradient fallback when image missing ---- */
+.booking-image {
+  background: var(--color-primary-dark);
+  background-image:
+    radial-gradient(ellipse at 50% 40%, rgba(86, 168, 236, 0.50) 0%, transparent 70%);
 }
